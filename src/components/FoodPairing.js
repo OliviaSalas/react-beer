@@ -3,11 +3,11 @@ import React from 'react';
 function FoodPairing({food_list}) {
   return (
     <React.Fragment>
-      <h3>Food pairing</h3>
-      <ul className="food-pairing">
+      <h3 className="food-pairing-title">Food pairing</h3>
+      <ul className="food-pairing-list">
         {
             food_list.map(food => {
-                return <li key={food}>{food}</li>
+                return <li className="food-pairing" key={food}>{food}</li>
             })
         }
       </ul>

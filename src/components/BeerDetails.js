@@ -4,11 +4,14 @@ import FoodPairing from './FoodPairing';
 function BeerDetails({name, image_url, description, food_pairing }) {
   return (
     <div className="beer-details">
-      <h2>{name}</h2>
       <img src={image_url} alt={name}/>
-      <p>{description}</p>
-      <FoodPairing food_list={food_pairing}/>
-      <hr/>
+      <div className="text">
+        <div className="beer-description">
+          <h2>{name}</h2>
+          <p>{description}</p>
+        </div>
+        <FoodPairing className="food-pairing-description" food_list={food_pairing}/>
+      </div>
     </div>
   );
 }
